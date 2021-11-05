@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # # ROS imports
 import rospy
-from std_msgs.msg import uint8
+from std_msgs.msg import UInt8
 import time 
 from smbus2 import SMBus
 
@@ -29,7 +29,7 @@ def callback(data):
 def listener():
 
     rospy.init_node("nodo_sistema_extraccion_b")
-    rospy.Subscriber(topic_sistema_extraccion_b, uint8, callback) #topico, tipo de dato, correr funcion
+    rospy.Subscriber(topic_sistema_extraccion_b, UInt8, callback) #topico, tipo de dato, correr funcion
     
 
     # spin() simply keeps python from exiting until this node is stopped
